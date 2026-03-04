@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="it">
 <head>
 <meta charset="UTF-8">
@@ -26,7 +26,7 @@
   opacity: 1;
 }
 
-/* HOTSPOT INTERATTIVI */
+/* HOTSPOT INTERATTIVI (ora <a>) */
 .hotspot {
   position: absolute;
   left: 0;
@@ -35,6 +35,7 @@
   height: 749px;
   cursor: pointer;
   background: transparent;
+  text-decoration: none;
 }
 
 /* Tooltip */
@@ -107,33 +108,20 @@
   <div class="overlay tr3"></div>
   <div class="overlay mag"></div>
 
-  <!-- HOTSPOT INTERATTIVI -->
-  <div class="hotspot hot-vhc1" data-name="Sala Valvole VHC1"></div>
-  <div class="hotspot hot-cc1" data-name="Sala Corrente Continua CC1"></div>
-  <div class="hotspot hot-vhc2" data-name="Sala Valvole VHC2"></div>
-  <div class="hotspot hot-cc2" data-name="Sala Corrente Continua CC2"></div>
-  <div class="hotspot hot-cb" data-name="Control Building"></div>
-  <div class="hotspot hot-tr1" data-name="Trasformatore 1"></div>
-  <div class="hotspot hot-tr2" data-name="Trasformatore 2"></div>
-  <div class="hotspot hot-tr3" data-name="Trasformatore 3"></div>
-  <div class="hotspot hot-mag" data-name="Magazzino"></div>
+  <!-- HOTSPOT INTERATTIVI (ora cliccabili) -->
+  <a class="hotspot hot-vhc1" href="https://gussofrag.github.io/Sala_valvole_VHC1-fondazioni/" data-name="Sala Valvole VHC1"></a>
+  <a class="hotspot hot-cc1" href="https://gussofrag.github.io/Sala-corrente-continua-CC1/" data-name="Sala Corrente Continua CC1"></a>
+  <a class="hotspot hot-vhc2" href="https://gussofrag.github.io/Sala_valvole_VHC2-fondazioni/" data-name="Sala Valvole VHC2"></a>
+  <a class="hotspot hot-cc2" href="https://gussofrag.github.io/Sala-corrente-continua-CC2/" data-name="Sala Corrente Continua CC2"></a>
+  <a class="hotspot hot-cb" href="https://gussofrag.github.io/control-building/" data-name="Control Building"></a>
+  <a class="hotspot hot-tr1" href="#" data-name="Trasformatore 1"></a>
+  <a class="hotspot hot-tr2" href="#" data-name="Trasformatore 2"></a>
+  <a class="hotspot hot-tr3" href="#" data-name="Trasformatore 3"></a>
+  <a class="hotspot hot-mag" href="#" data-name="Magazzino"></a>
 
   <div id="tooltip"></div>
 
 </div>
-
-<!-- MAPPA ORIGINALE (clic attivi) -->
-<map name="mappa">
-  <area shape="poly" coords="126,480,233,480,233,547,126,547" href="https://gussofrag.github.io/Sala_valvole_VHC1-fondazioni/" alt="Sala Valvole VHC1 – Fondazioni">
-  <area shape="poly" coords="126,548,233,548,233,572,210,572,210,604,126,604" href="https://gussofrag.github.io/Sala-corrente-continua-CC1/" alt="Sala Corrente Continua CC1">
-  <area shape="poly" coords="295,480,400,480,400,547,293,547" href="https://gussofrag.github.io/Sala_valvole_VHC2-fondazioni/" alt="Sala Valvole VHC2 – Fondazioni">
-  <area shape="poly" coords="293,548,400,548,400,604,315,604,315,572,293,572" href="https://gussofrag.github.io/Sala-corrente-continua-CC2/" alt="Sala Corrente Continua CC2">
-  <area shape="poly" coords="235,480,293,480,293,528,235,528" href="https://gussofrag.github.io/control-building/" alt="Control Building">
-  <area shape="poly" coords="199,375,231,375,231,397,199,397" href="#" alt="Trasformatore 1">
-  <area shape="poly" coords="280,375,311,375,311,397,280,397" href="#" alt="Trasformatore 2">
-  <area shape="poly" coords="324,375,356,375,356,397,324,397" href="#" alt="Trasformatore 3">
-  <area shape="poly" coords="386,142,451,142,451,176,386,176" href="#" alt="Magazzino">
-</map>
 
 <script>
 const tooltip = document.getElementById("tooltip");
@@ -158,4 +146,3 @@ hotspots.forEach(h => {
 
 </body>
 </html>
-
