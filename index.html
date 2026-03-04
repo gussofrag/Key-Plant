@@ -11,6 +11,11 @@
   height: 749px;
 }
 
+.container img {
+  display: block;
+}
+
+/* OVERLAY COLORATI */
 .overlay {
   position: absolute;
   left: 0;
@@ -21,59 +26,67 @@
   opacity: 1;
 }
 
-/* VHC1 */
-.vhc1 {
-  background: rgba(255, 0, 0, 0.35);
-  clip-path: polygon(126px 480px,233px 480px,233px 547px,126px 547px);
+/* HOTSPOT INTERATTIVI */
+.hotspot {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 576px;
+  height: 749px;
+  cursor: pointer;
+  background: transparent;
 }
+
+/* Tooltip */
+#tooltip {
+  position: absolute;
+  padding: 6px 10px;
+  background: rgba(0,0,0,0.75);
+  color: white;
+  font-size: 14px;
+  border-radius: 4px;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.15s ease;
+  z-index: 999;
+}
+
+/* VHC1 */
+.vhc1 { background: rgba(255, 0, 0, 0.35); clip-path: polygon(126px 480px,233px 480px,233px 547px,126px 547px); }
+.hot-vhc1 { clip-path: polygon(126px 480px,233px 480px,233px 547px,126px 547px); }
 
 /* CC1 */
-.cc1 {
-  background: rgba(0, 0, 255, 0.35);
-  clip-path: polygon(126px 548px,233px 548px,233px 572px,210px 572px,210px 604px,126px 604px);
-}
+.cc1 { background: rgba(0, 0, 255, 0.35); clip-path: polygon(126px 548px,233px 548px,233px 572px,210px 572px,210px 604px,126px 604px); }
+.hot-cc1 { clip-path: polygon(126px 548px,233px 548px,233px 572px,210px 572px,210px 604px,126px 604px); }
 
 /* VHC2 */
-.vhc2 {
-  background: rgba(0, 0, 255, 0.35);
-  clip-path: polygon(295px 480px,400px 480px,400px 547px,293px 547px);
-}
+.vhc2 { background: rgba(0, 0, 255, 0.35); clip-path: polygon(295px 480px,400px 480px,400px 547px,293px 547px); }
+.hot-vhc2 { clip-path: polygon(295px 480px,400px 480px,400px 547px,293px 547px); }
 
 /* CC2 */
-.cc2 {
-  background: rgba(255, 0, 0, 0.35);
-  clip-path: polygon(293px 548px,400px 548px,400px 604px,315px 604px,315px 572px,293px 572px);
-}
+.cc2 { background: rgba(255, 0, 0, 0.35); clip-path: polygon(293px 548px,400px 548px,400px 604px,315px 604px,315px 572px,293px 572px); }
+.hot-cc2 { clip-path: polygon(293px 548px,400px 548px,400px 604px,315px 604px,315px 572px,293px 572px); }
 
 /* CB */
-.cb {
-  background: rgba(128, 0, 128, 0.35);
-  clip-path: polygon(235px 480px,293px 480px,293px 528px,235px 528px);
-}
+.cb { background: rgba(128, 0, 128, 0.35); clip-path: polygon(235px 480px,293px 480px,293px 528px,235px 528px); }
+.hot-cb { clip-path: polygon(235px 480px,293px 480px,293px 528px,235px 528px); }
 
 /* TR1 */
-.tr1 {
-  background: rgba(0, 255, 0, 0.35);
-  clip-path: polygon(199px 375px,231px 375px,231px 397px,199px 397px);
-}
+.tr1 { background: rgba(0, 255, 0, 0.35); clip-path: polygon(199px 375px,231px 375px,231px 397px,199px 397px); }
+.hot-tr1 { clip-path: polygon(199px 375px,231px 375px,231px 397px,199px 397px); }
 
 /* TR2 */
-.tr2 {
-  background: rgba(255, 255, 255, 0.35);
-  clip-path: polygon(280px 375px,311px 375px,311px 397px,280px 397px);
-}
+.tr2 { background: rgba(255, 255, 255, 0.35); clip-path: polygon(280px 375px,311px 375px,311px 397px,280px 397px); }
+.hot-tr2 { clip-path: polygon(280px 375px,311px 375px,311px 397px,280px 397px); }
 
 /* TR3 */
-.tr3 {
-  background: rgba(255, 0, 0, 0.35);
-  clip-path: polygon(324px 375px,356px 375px,356px 397px,324px 397px);
-}
+.tr3 { background: rgba(255, 0, 0, 0.35); clip-path: polygon(324px 375px,356px 375px,356px 397px,324px 397px); }
+.hot-tr3 { clip-path: polygon(324px 375px,356px 375px,356px 397px,324px 397px); }
 
 /* MAG */
-.mag {
-  background: rgba(0, 191, 255, 0.35);
-  clip-path: polygon(386px 142px,451px 142px,451px 176px,386px 176px);
-}
+.mag { background: rgba(0, 191, 255, 0.35); clip-path: polygon(386px 142px,451px 142px,451px 176px,386px 176px); }
+.hot-mag { clip-path: polygon(386px 142px,451px 142px,451px 176px,386px 176px); }
+
 </style>
 
 </head>
@@ -81,10 +94,9 @@
 
 <div class="container">
 
-  <!-- IMMAGINE PRINCIPALE -->
-  <img src="plan/key_plant.jpg" usemap="#mappa" width="576" height="749">
+  <img src="plan/key_plant.jpg" width="576" height="749">
 
-  <!-- OVERLAY -->
+  <!-- OVERLAY COLORATI -->
   <div class="overlay vhc1"></div>
   <div class="overlay cc1"></div>
   <div class="overlay vhc2"></div>
@@ -95,65 +107,54 @@
   <div class="overlay tr3"></div>
   <div class="overlay mag"></div>
 
+  <!-- HOTSPOT INTERATTIVI -->
+  <div class="hotspot hot-vhc1" data-name="Sala Valvole VHC1 – Fondazioni"></div>
+  <div class="hotspot hot-cc1" data-name="Sala Corrente Continua CC1"></div>
+  <div class="hotspot hot-vhc2" data-name="Sala Valvole VHC2 – Fondazioni"></div>
+  <div class="hotspot hot-cc2" data-name="Sala Corrente Continua CC2"></div>
+  <div class="hotspot hot-cb" data-name="Control Building"></div>
+  <div class="hotspot hot-tr1" data-name="Trasformatore 1"></div>
+  <div class="hotspot hot-tr2" data-name="Trasformatore 2"></div>
+  <div class="hotspot hot-tr3" data-name="Trasformatore 3"></div>
+  <div class="hotspot hot-mag" data-name="Magazzino"></div>
+
+  <div id="tooltip"></div>
+
 </div>
 
+<!-- MAPPA ORIGINALE (clic attivi) -->
 <map name="mappa">
-
-  <!-- VHC1 -->
-  <area shape="poly"
-        coords="126,480,233,480,233,547,126,547"
-        href="https://gussofrag.github.io/Sala_valvole_VHC1-fondazioni/"
-        alt="Sala Valvole VHC1 – Fondazioni">
-
-  <!-- CC1 -->
-  <area shape="poly"
-        coords="126,548,233,548,233,572,210,572,210,604,126,604"
-        href="https://gussofrag.github.io/Sala-corrente-continua-CC1/"
-        alt="Sala Corrente Continua CC1">
-
-  <!-- VHC2 -->
-  <area shape="poly"
-        coords="295,480,400,480,400,547,293,547"
-        href="https://gussofrag.github.io/Sala_valvole_VHC2-fondazioni/"
-        alt="Sala Valvole VHC2 – Fondazioni">
-
-  <!-- CC2 -->
-  <area shape="poly"
-        coords="293,548,400,548,400,604,315,604,315,572,293,572"
-        href="https://gussofrag.github.io/Sala-corrente-continua-CC2/"
-        alt="Sala Corrente Continua CC2">
-
-  <!-- CONTROL BUILDING -->
-  <area shape="poly"
-        coords="235,480,293,480,293,528,235,528"
-        href="https://gussofrag.github.io/control-building/"
-        alt="Control Building">
-
-  <!-- TR1 -->
-  <area shape="poly"
-        coords="199,375,231,375,231,397,199,397"
-        href="#"
-        alt="Trasformatore 1">
-
-  <!-- TR2 -->
-  <area shape="poly"
-        coords="280,375,311,375,311,397,280,397"
-        href="#"
-        alt="Trasformatore 2">
-
-  <!-- TR3 -->
-  <area shape="poly"
-        coords="324,375,356,375,356,397,324,397"
-        href="#"
-        alt="Trasformatore 3">
-
-  <!-- MAG -->
-  <area shape="poly"
-        coords="386,142,451,142,451,176,386,176"
-        href="#"
-        alt="Magazzino">
-
+  <area shape="poly" coords="126,480,233,480,233,547,126,547" href="https://gussofrag.github.io/Sala_valvole_VHC1-fondazioni/" alt="Sala Valvole VHC1 – Fondazioni">
+  <area shape="poly" coords="126,548,233,548,233,572,210,572,210,604,126,604" href="https://gussofrag.github.io/Sala-corrente-continua-CC1/" alt="Sala Corrente Continua CC1">
+  <area shape="poly" coords="295,480,400,480,400,547,293,547" href="https://gussofrag.github.io/Sala_valvole_VHC2-fondazioni/" alt="Sala Valvole VHC2 – Fondazioni">
+  <area shape="poly" coords="293,548,400,548,400,604,315,604,315,572,293,572" href="https://gussofrag.github.io/Sala-corrente-continua-CC2/" alt="Sala Corrente Continua CC2">
+  <area shape="poly" coords="235,480,293,480,293,528,235,528" href="https://gussofrag.github.io/control-building/" alt="Control Building">
+  <area shape="poly" coords="199,375,231,375,231,397,199,397" href="#" alt="Trasformatore 1">
+  <area shape="poly" coords="280,375,311,375,311,397,280,397" href="#" alt="Trasformatore 2">
+  <area shape="poly" coords="324,375,356,375,356,397,324,397" href="#" alt="Trasformatore 3">
+  <area shape="poly" coords="386,142,451,142,451,176,386,176" href="#" alt="Magazzino">
 </map>
+
+<script>
+const tooltip = document.getElementById("tooltip");
+const hotspots = document.querySelectorAll(".hotspot");
+
+hotspots.forEach(h => {
+  h.addEventListener("mouseenter", () => {
+    tooltip.textContent = h.dataset.name;
+    tooltip.style.opacity = 1;
+  });
+
+  h.addEventListener("mousemove", (e) => {
+    tooltip.style.left = (e.pageX + 12) + "px";
+    tooltip.style.top = (e.pageY + 12) + "px";
+  });
+
+  h.addEventListener("mouseleave", () => {
+    tooltip.style.opacity = 0;
+  });
+});
+</script>
 
 </body>
 </html>
