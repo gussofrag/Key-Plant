@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<title>Key Plant</title>
+
+<style>
+.container {
+  position: relative;
+  width: 576px;
+  height: 749px;
+}
+
+.overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 576px;
+  height: 749px;
+  pointer-events: none;
+  opacity: 1;
+}
+
+/* VHC1 */
+.vhc1 {
+  background: rgba(255, 0, 0, 0.35);
+  clip-path: polygon(126px 480px,233px 480px,233px 547px,126px 547px);
+}
+
+/* CC1 */
+.cc1 {
+  background: rgba(0, 0, 255, 0.35);
+  clip-path: polygon(126px 548px,233px 548px,233px 572px,210px 572px,210px 604px,126px 604px);
+}
+
+/* VHC2 */
+.vhc2 {
+  background: rgba(0, 0, 255, 0.35);
+  clip-path: polygon(295px 480px,400px 480px,400px 547px,293px 547px);
+}
+
+/* CC2 */
+.cc2 {
+  background: rgba(255, 0, 0, 0.35);
+  clip-path: polygon(293px 548px,400px 548px,400px 604px,315px 604px,315px 572px,293px 572px);
+}
+
+/* CB */
+.cb {
+  background: rgba(128, 0, 128, 0.35);
+  clip-path: polygon(235px 480px,293px 480px,293px 528px,235px 528px);
+}
+
+/* TR1 */
+.tr1 {
+  background: rgba(0, 255, 0, 0.35);
+  clip-path: polygon(199px 375px,231px 375px,231px 397px,199px 397px);
+}
+
+/* TR2 */
+.tr2 {
+  background: rgba(255, 255, 255, 0.35);
+  clip-path: polygon(280px 375px,311px 375px,311px 397px,280px 397px);
+}
+
+/* TR3 */
+.tr3 {
+  background: rgba(255, 0, 0, 0.35);
+  clip-path: polygon(324px 375px,356px 375px,356px 397px,324px 397px);
+}
+
+/* MAG */
+.mag {
+  background: rgba(0, 191, 255, 0.35);
+  clip-path: polygon(386px 142px,451px 142px,451px 176px,386px 176px);
+}
+</style>
+
+</head>
+<body>
+
+<div class="container">
+
+  <!-- IMMAGINE PRINCIPALE -->
+  <img src="plan/key_plant.jpg" usemap="#mappa" width="576" height="749">
+
+  <!-- OVERLAY -->
+  <div class="overlay vhc1"></div>
+  <div class="overlay cc1"></div>
+  <div class="overlay vhc2"></div>
+  <div class="overlay cc2"></div>
+  <div class="overlay cb"></div>
+  <div class="overlay tr1"></div>
+  <div class="overlay tr2"></div>
+  <div class="overlay tr3"></div>
+  <div class="overlay mag"></div>
+
+</div>
+
+<map name="mappa">
+
+  <!-- VHC1 -->
+  <area shape="poly"
+        coords="126,480,233,480,233,547,126,547"
+        href="https://gussofrag.github.io/Sala_valvole_VHC1-fondazioni/"
+        alt="Sala Valvole VHC1 – Fondazioni">
+
+  <!-- CC1 -->
+  <area shape="poly"
+        coords="126,548,233,548,233,572,210,572,210,604,126,604"
+        href="https://gussofrag.github.io/Sala-corrente-continua-CC1/"
+        alt="Sala Corrente Continua CC1">
+
+  <!-- VHC2 -->
+  <area shape="poly"
+        coords="295,480,400,480,400,547,293,547"
+        href="https://gussofrag.github.io/Sala_valvole_VHC2-fondazioni/"
+        alt="Sala Valvole VHC2 – Fondazioni">
+
+  <!-- CC2 -->
+  <area shape="poly"
+        coords="293,548,400,548,400,604,315,604,315,572,293,572"
+        href="https://gussofrag.github.io/Sala-corrente-continua-CC2/"
+        alt="Sala Corrente Continua CC2">
+
+  <!-- CONTROL BUILDING -->
+  <area shape="poly"
+        coords="235,480,293,480,293,528,235,528"
+        href="https://gussofrag.github.io/control-building/"
+        alt="Control Building">
+
+  <!-- TR1 -->
+  <area shape="poly"
+        coords="199,375,231,375,231,397,199,397"
+        href="#"
+        alt="Trasformatore 1">
+
+  <!-- TR2 -->
+  <area shape="poly"
+        coords="280,375,311,375,311,397,280,397"
+        href="#"
+        alt="Trasformatore 2">
+
+  <!-- TR3 -->
+  <area shape="poly"
+        coords="324,375,356,375,356,397,324,397"
+        href="#"
+        alt="Trasformatore 3">
+
+  <!-- MAG -->
+  <area shape="poly"
+        coords="386,142,451,142,451,176,386,176"
+        href="#"
+        alt="Magazzino">
+
+</map>
+
+</body>
+</html>
